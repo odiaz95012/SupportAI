@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+@layer base {
+  :root {
+    --color-bgBase: 39deg 85% 95%;
+    --color-content: 0deg 0% 20%;
+  }
+
+  /* If the user's system preference is dark */
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --color-bgBase: 240deg 27% 18%;
+      --color-content: 210deg 14% 53%;
+    }
+  }
+
+  
+  /* If the user switchs dark mode */
+  :root[data-theme="dark"] {
+    --color-bgBase: 240deg 27% 18%;
+    --color-content: 210deg 14% 53%;
+  }
+
+  /* If the user switchs light mode */
+  :root[data-theme="light"] {
+    --color-bgBase: 39deg 85% 95%;
+    --color-content: 0deg 0% 20%;
+  }
+  body {
+    color: var(--color-content);
+    background-color: hsl(var(--color-bgBase));
+    font: 1em sans-serif;
+  }
+}
