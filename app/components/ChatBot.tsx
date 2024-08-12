@@ -3,6 +3,8 @@ import React, { useState } from "react";
 import { Message as MessageType } from "../types";
 import Message from "./Message";
 
+
+
 const ChatBot = () => {
     const [messages, setMessages] = useState<MessageType[]>([
         {
@@ -73,7 +75,7 @@ const ChatBot = () => {
 
 
     return (
-        <div className="flex justify-center items-center min-h-fit bg-Base">
+        <div className="flex justify-center items-center min-h-fit bg-Base py-24 md:py-0">
             <div
                 style={{ boxShadow: "0 0 #0000, 0 0 #0000, 0 1px 2px 0 rgb(0 0 0 / 0.05)" }}
                 className="bg-white p-6 my-24 rounded-lg border border-[#e5e7eb] w-4/5 sm:w-4/5 md:w-1/3 h-[634px] flex flex-col overflow-hidden"

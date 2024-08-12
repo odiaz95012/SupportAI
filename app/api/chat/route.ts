@@ -6,8 +6,10 @@ The user can ask you anything and you will do your best to help them.\n
 Important: Output will be only plain text. Markdown syntax highlight forbidden.
 `;
 
+
+
 export async function POST(req: Request) {
-    const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+    const openai = new OpenAI({ apiKey: process.env.OPEN_AI_API_KEY });
     const data = await req.json();
 
 
